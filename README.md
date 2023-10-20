@@ -5,4 +5,5 @@ The Initial code work
 - json server dependency added
 - folder structure 
 
-
+install dependencies -> npm install
+to run watch db.json with server -> json-server --watch data/db.json
