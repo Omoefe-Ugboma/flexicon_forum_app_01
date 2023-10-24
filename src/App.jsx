@@ -1,11 +1,25 @@
+import {Routes , Route} from 'react-router-dom'
+import Home from "./pages/Home";
+import Error from "./components/Error";
+import Modal from "./components/Modal";
+import SharedLayouts from "./components/SharedLayouts";
+
+
 function App() {
   return (
  
-<section className="h-screen flex text-center">
-    <div className="w-1/4 bg-red-500 h-full">01</div>
-    <div className="w-1/2 bg-green-500 h-full">02</div>
-    <div className="w-1/4 bg-yellow-500 h-full">03</div>
-</section>
+<Routes>
+    <Route path="/" element = {<SharedLayouts/>}>
+         <Route path="/login" element = {<Modal/>} />
+         <Route index element = {<Home/>} />
+         <Route path="*" element = {<Error/>} />
+    </Route>
+</Routes>
+
+    )
+}
+export default App;
+
 
 
 // if the tailwind isnt running on your pc simply install the dependency
@@ -37,9 +51,4 @@ function App() {
 
 //step 5. npm run dev 
 
-
-
-    )
-}
-export default App;
 
