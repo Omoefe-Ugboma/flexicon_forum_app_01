@@ -1,7 +1,7 @@
 import {Routes , Route} from 'react-router-dom'
 import Home from "./pages/Home";
 import Error from "./components/Error";
-import Modal from "./components/Modal";
+// import Modal from "./components/Modal";
 import SharedLayouts from "./components/SharedLayouts";
 
 
@@ -10,7 +10,7 @@ function App() {
  
 <Routes>
     <Route path="/" element = {<SharedLayouts/>}>
-         <Route path="/login" element = {<Modal/>} />
+         {/* <Route path="/login" element = {<Modal/>} /> */}
          <Route index element = {<Home/>} />
          <Route path="*" element = {<Error/>} />
     </Route>

@@ -1,28 +1,68 @@
-import { NavLink } from 'react-router-dom'
+import LoginModal from './Auth';
 import Logo from './Logo';
 import SearchBar from './SearchBar';
+import { useState } from 'react';
+import {AiOutlineClose} from 'react-icons/ai'
 
-function NavBar( { toggleModal }){
+
+function NavBar(){
+
+    const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  
+    const openLoginModal = () => {
+        setIsLoginModalOpen(true);
+      };
+    
+      const closeLoginModal = () => {
+        setIsLoginModalOpen(false);
+      };
+
+      
+
 
     return (
 
        
-       <nav className='flex justify-between font-semibold p-3 border-b border-gray-200 gap-10 text-gray-400 '>
+       <nav className='flex justify-between font-semibold p-3 border-b border-gray-200 gap-10 text-gray-400  '>
 
         <div className='flex justify-start text-red-500 font-bold text-xl '> <Logo/> </div>
         
         <div><SearchBar/></div>
         
            {/* <NavLink to= '/' style={({isActive}) => {return {color:isActive ? 'blue':'black'};}} >Home</NavLink> */}
-           <NavLink to= '/login' style={({isActive}) => {return {color:isActive ? 'blue':'black'};}}>
+         
                < button  data-modal-target="popup-modal" data-modal-toggle="popup-modal" 
                className="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg
-                text-sm px-4 py-2  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 " type="button"   onClick={toggleModal}>
+                text-sm px-4 py-2  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 " type="button"  onClick={openLoginModal} >
                    Login
                </button>
-            </NavLink>
+
+        {/* Beginning of login modal  */}
+           
+               {isLoginModalOpen && (
+                  <div className="fixed inset-0 flex items-center justify-center z-50 ">
+                    <div className="modal fixed bg-white p-8 rounded shadow-lg">
+                    <button
+                        onClick={closeLoginModal}
+                        className=" hover:bg-gray-600 text-black  float-right mt-10 "
+                      >
+                        <AiOutlineClose/>
+                      </button>
+                      
+                      {/* Login Form */}
+                      <LoginModal />
+                      
+                    
+                    </div>
+                  </div>
+               )}
+        
+        {/* End of login modal  */}
+      
+
+       
           
-          
+
        </nav>
 
     )
@@ -30,3 +70,4 @@ function NavBar( { toggleModal }){
     
 }
 export default NavBar;
+
