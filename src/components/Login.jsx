@@ -1,26 +1,20 @@
+import {useState} from "react";
 
-import { useNavigate } from 'react-router-dom'
-import { useState } from 'react'
+const Login = ({openSignUp}) => {
+    const [ email , setEmail] = useState('');
+    const [ password , setPassword ] = useState('');
 
- function LoginModal({ setUser }) {
-
-   const [ email , setEmail] = useState('');
-   const [ password , setPassword ] = useState('');
-
-  const navigate = useNavigate();
-
-   const handleSubmit = async(e) => {
-    e.preventDefault();
-    
-    
-   if (!email || !password) return;
-    setUser({email:email , password:password});
-    navigate('/sucesspage');
-   }
-    return (
-      <>
+    const handleSubmit = async(e) => {
+        e.preventDefault();
         
-        <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+        
+       if (!email || !password) return;
+        setUser({email:email , password:password});
+        // navigate('/sucesspage');
+       }
+
+    return(
+     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
            
             <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
@@ -85,14 +79,13 @@ import { useState } from 'react'
   
             <p className="mt-10 text-center text-sm text-gray-500">
               Not a member?{' '}
-              <button className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+              <button className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
+                onClick={() => openSignUp()} >
                 Sign Up
               </button> 
             </p>
           </div>
         </div>
-      </>
     )
-  }
-  
-  export default LoginModal;
+}
+export default Login;
