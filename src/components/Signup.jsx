@@ -11,6 +11,16 @@ const Signup = ({closeSignUp}) => {
     
     const handleSubmit = async(e) => {
         e.preventDefault();
+
+        const signup ={fname,lname,dob,email,password}
+
+        fetch('http://localhost:8001/signup',{
+          method:'POST',
+          headers: {"Content-type":"application/json"},
+          body : JSON.stringify(signup)
+        }).then(()=>{
+          console.log('NEW user added')
+        })
     }
 
     return (
