@@ -5,54 +5,16 @@ import { useNavigate } from "react-router-dom";
 const Login = ({ openSignUp }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isPending , setIsPending] = useState(false)
-  const [user , setUser] = useState('')
+  const [isPending, setIsPending] = useState(false);
+  const [user, setUser] = useState("");
 
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    
     const login = { email, password };
-
-    // fetch('http://localhost:8000/signup',{
-    //   method:'GET',
-    //   headers:{"content-type":"application/json"},
-    //   // body: JSON.stringify(login)
-    //  }).then(({data})=>{
-    //   console.log(data)
-    //   if (user.email)
-    //   console.log('User found')
-    // else
-    //   console.error('user not found');
-    //   navigate("/")
-    //  })
-
-    // if (!email || !password) return;
-    // setUser({ email: email, password: password });
-    // // navigate('/sucesspage');
-   const getData = async () =>{
-    fetch("db.json")
-    .then((res)=>res.json())
-    .then(({signup})=>{
-      
-      for(let i = 0; i < signup.length; i++){
-        
-        if (email === signup[i].email && password === signup[i].password){
-          console.log('user found')
-          navigate("/")
-          return
-        }
-      }
-      console.log('user not found')
-      
-      throw new Error("Invalid Email or Password");
-      
-    })
-   }
-   getData()
- 
+    navigate('/')
   };
 
   return (
@@ -126,7 +88,6 @@ const Login = ({ openSignUp }) => {
             >
               Sign in
             </button>
-            
           </div>
         </form>
 
