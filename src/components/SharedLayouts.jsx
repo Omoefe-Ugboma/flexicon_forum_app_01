@@ -1,18 +1,13 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "../components/NavBar";
 
+function SharedLayouts() {
+  return (
+    <>
+      <NavBar />
 
-function SharedLayouts(){
-
-  
-    return(
-      
-     <>
-       <NavBar/>
-       
-       <Outlet/>
-
+      <Outlet />
     </>
-    );
+  );
 }
 export default SharedLayouts;
