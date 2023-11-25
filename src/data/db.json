@@ -1,5 +1,32 @@
 {
   "Users": [
-  
+    {
+      "id": 1,
+      "username": "user1",
+      "email": "user1@example.com",
+      "password": "1234"
+    },
+    {
+      "id": 2,
+      "username": "user2",
+      "email": "user2@example.com",
+      "password": "2468"
+    }
+  ],
+  "Posts": [
+    {
+      "id": 101,
+      "title": "JavaScript Superhero",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio consequatur nesciunt repellendus asperiores neque aperiam vel odio at omnis hic.",
+      "likes": 15,
+      "user_id": 1
+    },
+    {
+      "id": 102,
+      "title": "Css Cupcakes",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio consequatur nesciunt repellendus asperiores neque aperiam vel odio at omnis hic.",
+      "likes": 45,
+      "user_id": 2
+    }
   ]
 }

@@ -1,34 +1,30 @@
-
 // import { useNavigate } from 'react-router-dom'
-import { useState } from 'react'
-import Login from './Login';
-import Signup from './Signup';
+import { useState } from "react";
+import Login from "./Login";
+import Signup from "./Signup";
 
+function LoginModal() {
+  const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
 
- function LoginModal() {
+  const openSignUpModal = () => {
+    setIsSignUpModalOpen(true);
+  };
 
-   const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
-
-       
-   const openSignUpModal = () => {
-       setIsSignUpModalOpen(true);
-};
-
-   const closeSignUpModal = () => {
+  const closeSignUpModal = () => {
     setIsSignUpModalOpen(false);
-}; 
+  };
 
   // const navigate = useNavigate();
 
-    return (
-      <>
-      {isSignUpModalOpen ? <Signup closeSignUp={closeSignUpModal} /> : <Login openSignUp={openSignUpModal}/>
+  return (
+    <>
+      {isSignUpModalOpen ? (
+        <Signup closeSignUp={closeSignUpModal} />
+      ) : (
+        <Login openSignUp={openSignUpModal} />
+      )}
+    </>
+  );
 }
-        
-      
 
-      </>
-    )
-  }
-  
-  export default LoginModal;
+export default LoginModal;
