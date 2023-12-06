@@ -1,8 +1,13 @@
 import {Routes , Route} from 'react-router-dom'
 import Home from "./pages/Home";
 import Error from "./components/Error";
-// import Modal from "./components/Modal";
 import SharedLayouts from "./components/SharedLayouts";
+import AboutPage from './pages/AboutPage';
+import Technology from './pages/Technology';
+import Gaming from './pages/Gaming';
+import Policy from './pages/Policy';
+import Trending from './pages/Trending';
+import Communities from './pages/Communities';
 
 
 function App() {
@@ -10,8 +15,13 @@ function App() {
  
 <Routes>
     <Route path="/" element = {<SharedLayouts/>}>
-         {/* <Route path="/login" element = {<Modal/>} /> */}
          <Route index element = {<Home/>} />
+           <Route path='/about' element = {<AboutPage/>}/>
+           <Route path='/technology' element = {<Technology/>}/>
+           <Route path='/gaming' element = {<Gaming/>}/>
+           <Route path='/policy' element = {<Policy/>}/>
+           <Route path='/communities' element = {<Communities/>}/>
+           <Route path='/trending' element = {<Trending/>}/>
          <Route path="*" element = {<Error/>} />
     </Route>
 </Routes>
