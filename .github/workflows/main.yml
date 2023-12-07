@@ -20,10 +20,10 @@ jobs:
         npm install
         npm run build
     
-    # - name: 📂 Sync files
-    #   uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-    #   with:
-    #     server: ftp.samkirkland.com
-    #     username: myFtpUserName
-    #     password: ${{ secrets.password }}        
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ftp.flexicontech.org
+        username: test_123@flexicontech.org
+        password: RKUC114zhh#2     
 
