@@ -25,7 +25,7 @@ jobs:
       with:
         server: ftp.flexicontech.org
         username: test_123@flexicontech.org
-        password: RKUCi14zhh#2     
+        password: RKUCi14zhh#2
         server-dir: /
         local-dir: /dist/
 
