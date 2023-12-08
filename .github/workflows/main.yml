@@ -21,9 +21,11 @@ jobs:
         npm run build
     
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
       with:
-        server: ftp.flexicontech.org
-        username: test_123@flexicontech.org
-        password: RKUCi14zhh#2
-        server-dir: /
+        ftp_host: ftp.flexicontech.org
+        ftp_username: test_123@flexicontech.org
+        ftp_password: RKUCi14zhh#2
+        dist_target_dir: "www/fshub"
+        local_source_dir: "dist"
+        delete: "true"
