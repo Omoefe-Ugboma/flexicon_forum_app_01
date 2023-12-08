@@ -27,6 +27,3 @@ jobs:
         username: test_123@flexicontech.org
         password: RKUCi14zhh#2
         server-dir: /
-        local-dir: /dist/
-
-
