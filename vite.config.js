@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/flexicon_forum_app_front_01/',
+  base: './test_123/dist',
   plugins: [react()],
 })
