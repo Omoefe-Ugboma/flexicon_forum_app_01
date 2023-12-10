@@ -5,7 +5,7 @@ import DisplayPost from "../components/posts/displayPosts/DisplayPost";
 function Home() {
   return (
     <>
-      <section className="h-screen flex gap-2">
+      <section className="h-screen flex gap-4">
         <div className="w-1/4 bg-gray-500 h-full">
           {" "}
           <SideBar />{" "}

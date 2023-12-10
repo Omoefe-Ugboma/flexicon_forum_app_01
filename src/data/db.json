@@ -18,14 +18,18 @@
       "id": 101,
       "title": "JavaScript Superhero",
       "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio consequatur nesciunt repellendus asperiores neque aperiam vel odio at omnis hic.",
-      "likes": 15,
+      "upvotes": 15,
+      "downvotes": 4,
+      "replies": 10,
       "user_id": 1
     },
     {
       "id": 102,
       "title": "Css Cupcakes",
       "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio consequatur nesciunt repellendus asperiores neque aperiam vel odio at omnis hic.",
-      "likes": 45,
+      "upvotes": 45,
+      "downvotes": 2,
+      "replies": 13,
       "user_id": 2
     }
   ]
