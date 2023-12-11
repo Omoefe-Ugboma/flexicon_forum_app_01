@@ -1,8 +1,11 @@
 import axios from "axios";
 import { useState } from "react";
+import { useDispatch } from "react-redux"
 import { useNavigate } from "react-router-dom";
+import { loginUser } from "../features/userSlice"
 
 const Login = ({ openSignUp }) => {
+  const dispatch = useDispatch()
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isPending, setIsPending] = useState(false);
@@ -12,9 +15,9 @@ const Login = ({ openSignUp }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    const login = { email, password };
-    navigate('/')
+    const userData = {email, password}
+    dispatch(loginUser(userData))
+    navigate('/trending')
   };
 
   return (
