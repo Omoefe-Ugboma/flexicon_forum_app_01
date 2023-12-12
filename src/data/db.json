@@ -1,5 +1,5 @@
 {
-  "Users": [
+  "users": [
     {
       "id": 1,
       "username": "user1",
@@ -13,7 +13,7 @@
       "password": "2468"
     }
   ],
-  "Posts": [
+  "posts": [
     {
       "id": 101,
       "title": "JavaScript Superhero",
@@ -30,6 +30,42 @@
       "upvotes": 45,
       "downvotes": 2,
       "replies": 13,
+      "user_id": 2
+    },
+    {
+      "id": 103,
+      "title": "JavaScript Superhero",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio consequatur nesciunt repellendus asperiores neque aperiam vel odio at omnis hic.",
+      "upvotes": 16,
+      "downvotes": 4,
+      "replies": 10,
+      "user_id": 1
+    },
+    {
+      "id": 104,
+      "title": "Css Cupcakes",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio consequatur nesciunt repellendus asperiores neque aperiam vel odio at omnis hic.",
+      "upvotes": 45,
+      "downvotes": 2,
+      "replies": 13,
+      "user_id": 2
+    },
+    {
+      "id": 105,
+      "title": "JavaScript Superhero",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio consequatur nesciunt repellendus asperiores neque aperiam vel odio at omnis hic.",
+      "upvotes": 1,
+      "downvotes": 4,
+      "replies": 100,
+      "user_id": 1
+    },
+    {
+      "id": 106,
+      "title": "Css Cupcakes",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio consequatur nesciunt repellendus asperiores neque aperiam vel odio at omnis hic.",
+      "upvotes": 8,
+      "downvotes": 2,
+      "replies": 2,
       "user_id": 2
     }
   ]

@@ -1,6 +1,6 @@
 import SideBar from "../components/SideBar";
-import CreatePosts from "../components/posts/createpost/CreatePost";
-import DisplayPost from "../components/posts/displayPosts/DisplayPost";
+import CreatePosts from "../features/create_posts/CreatePost";
+import Posts from "../features/posts/Posts";
 
 function Home() {
   return (
@@ -10,9 +10,10 @@ function Home() {
           {" "}
           <SideBar />{" "}
         </div>
-        <div className="w-1/2 bg-gray-200 h-full">
+        {/* bg-gray-200 */}
+        <div className="w-1/2  h-full">
           <CreatePosts />
-          <DisplayPost />
+          <Posts />
         </div>
         <div className="w-1/4 bg-gray-500 h-full">03</div>
       </section>
