@@ -27,5 +27,4 @@ jobs:
         ftp_username: test_123@flexicontech.org
         ftp_password: RKUCi14zhh#2
         dist_target_dir: ""
-        local_source_dir: "dist"
         delete: "true"
