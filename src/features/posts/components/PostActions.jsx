@@ -1,4 +1,3 @@
-import { MdChildFriendly } from "react-icons/md";
 import { Upvote, Downvote, Reply } from "../../../assets/icons";
 import Button from "../../../components/button/Button";
 

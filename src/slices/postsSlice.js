@@ -44,5 +44,5 @@ const postsSlice = createSlice({
   },
 });
 
-// export const {content,upvotes,downvotes,replies,user_id,id} = createSlice.a
+
 export default postsSlice.reducer;

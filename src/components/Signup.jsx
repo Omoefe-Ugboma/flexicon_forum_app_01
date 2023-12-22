@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { signUpUser as signUpUser } from "../slices/userSlice";
+import { userSignup } from "../features/Authentication/sign_up/sigup_asyncThunk";
 
 const Signup = ({ closeSignUp }) => {
   const dispatch = useDispatch();
@@ -13,7 +13,7 @@ const Signup = ({ closeSignUp }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const userData = { fname, lname, dob, email, password };
-    dispatch(signUpUser(userData));
+    dispatch(userSignup(userData));
     closeSignUp();
   };
 
@@ -34,48 +34,6 @@ const Signup = ({ closeSignUp }) => {
         >
           <div>
             <label
-              htmlFor="firstName"
-              className="block text-sm font-medium leading-6 text-gray-900"
-            >
-              First Name
-            </label>
-            <div className="mt-1">
-              <input
-                id="firstName"
-                name="firstName"
-                type="text"
-                value={fname}
-                onChange={(e) => setFname(e.target.value)}
-                autoComplete="firstName"
-                required
-                className="block w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
-          </div>
-
-          <div>
-            <label
-              htmlFor="lastName"
-              className="block text-sm font-medium leading-6 text-gray-900"
-            >
-              Last Name
-            </label>
-            <div className="mt-1">
-              <input
-                id="lastName"
-                name="lastName"
-                type="type"
-                value={lname}
-                onChange={(e) => setLname(e.target.value)}
-                autoComplete="lastName"
-                required
-                className="block w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
-          </div>
-
-          <div>
-            <label
               htmlFor="email"
               className="block text-sm font-medium leading-6 text-gray-900"
             >
@@ -89,27 +47,6 @@ const Signup = ({ closeSignUp }) => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 autoComplete="email"
-                required
-                className="block w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
-          </div>
-
-          <div>
-            <label
-              htmlFor="dob"
-              className="block text-sm font-medium leading-6 text-gray-900"
-            >
-              Date of birth
-            </label>
-            <div className="mt-1">
-              <input
-                id="dob"
-                name="dob"
-                type="date"
-                value={dob}
-                onChange={(e) => setDob(e.target.value)}
-                autoComplete="dob"
                 required
                 className="block w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
