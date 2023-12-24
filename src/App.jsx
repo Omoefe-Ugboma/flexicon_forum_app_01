@@ -1,16 +1,19 @@
-import { Routes, Route } from "react-router-dom";
+// import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Error from "./components/Error";
-import SharedLayouts from "./components/SharedLayouts";
+// import Error from "./components/Error";
+// import SharedLayouts from "./components/SharedLayouts";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<SharedLayouts />}>
-        <Route index element={<Home />} />
-        <Route path="*" element={<Error />} />
-      </Route>
-    </Routes>
+    // <Routes>
+    //   <Route path="/" element={<SharedLayouts />}>
+    //     <Route index element={<Home />} />
+    //     <Route path="*" element={<Error />} />
+    //   </Route>
+    // </Routes>
+    <>
+      <Home />
+    </>
   );
 }
 export default App;
