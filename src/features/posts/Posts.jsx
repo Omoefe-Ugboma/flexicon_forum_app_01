@@ -6,10 +6,10 @@ import PostActions from "./components/PostActions";
 
 const Posts = () => {
   return (
-    <>
+    <div>
       {data.posts.map((post) => {
         return (
-          <div className={styles.container} key={post.id}>
+          <div className={styles.post_container} key={post.id}>
             <div className={styles.contents_box}>
               <PostInfo styles={styles} info={post.user_id} />
               <Content content={post.content} />
@@ -19,7 +19,7 @@ const Posts = () => {
           </div>
         );
       })}
-    </>
+    </div>
   );
 };
 
