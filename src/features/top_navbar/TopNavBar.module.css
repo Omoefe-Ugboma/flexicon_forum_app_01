@@ -1,0 +1,40 @@
+.search_icon {
+  font-size: 1.2rem;
+  color: var(--border-color);
+}
+.menu_icons {
+  font-size: 2rem;
+}
+
+.menu_icons,
+.react_icons:hover {
+  cursor: pointer;
+}
+
+.topNav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search {
+  display: flex;
+  background-color: var(--bg2);
+  border-radius: var(--border-r-m);
+  padding: 0.4rem;
+  height: 2.5rem;
+  align-self: center;
+}
+
+input {
+  outline: 0;
+}
+
+.menu_Container {
+  display: flex;
+  gap: 1rem;
+
+  padding: 1rem 2rem;
+}
+.menu_Container:hover {
+  background-color: var(--bg2);
+}

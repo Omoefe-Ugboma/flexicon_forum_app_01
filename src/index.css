@@ -1,3 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --txt-pry: black;
+  --bg: rgba(219, 219, 219, 0.781);
+  --bg2: white;
+  --border-color: rgb(120, 126, 135);
+  --border-r-sm: 0.2rem;
+  --border-r-m: 0.5rem;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--txt-pry);
+  text-decoration: none;
+  background-color: var(--bg);
+  height: 100dvh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.appGrid {
+  display: grid;
+  grid-template-columns: 3.7rem 1fr;
+  gap: 2rem;
+  height: 100dvh;
+}
+
+.modalOverlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+.modal{
+  position: fixed;
+  top: 50;
+  left: 50;
+  transform: translate(-50%, -50%);
+  z-index: inherit;
+}

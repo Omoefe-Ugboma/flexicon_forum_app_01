@@ -4,9 +4,6 @@ import { userSignup } from "../features/Authentication/sign_up/sigup_asyncThunk"
 
 const Signup = ({ closeSignUp }) => {
   const dispatch = useDispatch();
-  const [fname, setFname] = useState("");
-  const [lname, setLname] = useState("");
-  const [dob, setDob] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
